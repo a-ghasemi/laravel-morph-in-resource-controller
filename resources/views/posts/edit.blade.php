@@ -1,3 +1,5 @@
+<h1>Post Edit</h1>
+
 <form action="{{ route('posts.update',[$item]) }}" method="post">
     @csrf
     @method('PUT')

@@ -9,6 +9,8 @@
         border-bottom: 2px solid gray;
     }
 </style>
+
+<h1>Images</h1>
 <table cellspacing="0" cellpadding="2">
     <thead>
     <tr>

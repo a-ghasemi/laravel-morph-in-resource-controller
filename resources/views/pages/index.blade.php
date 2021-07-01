@@ -10,13 +10,13 @@
     }
 </style>
 
-<h1>Posts</h1>
+<h1>Pages</h1>
 <table cellspacing="0" cellpadding="2">
     <thead>
     <tr>
         <th>Image</th>
         <th>ID</th>
-        <th>Name</th>
+        <th>Title</th>
         <th>Actions</th>
     </tr>
     </thead>

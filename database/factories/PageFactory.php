@@ -2,19 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Image;
 use App\Models\Page;
-use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ImageFactory extends Factory
+class PageFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Image::class;
+    protected $model = Page::class;
 
     /**
      * Define the model's default state.
@@ -23,12 +21,8 @@ class ImageFactory extends Factory
      */
     public function definition()
     {
-        $imageable_type = $this->faker->boolean ? Post::class : Page::class;
-
         return [
-            'imageable_type' => $imageable_type,
-            'imageable_id' => (new $imageable_type)::all()->random()->id,
-            'url'     => $this->faker->imageUrl(),
+            'title' => $this->faker->name,
         ];
     }
 }

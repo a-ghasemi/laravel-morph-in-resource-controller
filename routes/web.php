@@ -7,4 +7,5 @@ Route::get('/', function () {
 });
 
 Route::resource('posts','PostController');
+Route::resource('pages','PageController');
 Route::resource('images','ImageController');

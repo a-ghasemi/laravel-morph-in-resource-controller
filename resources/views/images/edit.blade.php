@@ -1,3 +1,5 @@
+<h1>Image Edit</h1>
+
 <form action="{{ route('images.update',[$item]) }}" method="post">
     @csrf
     @method('PUT')
