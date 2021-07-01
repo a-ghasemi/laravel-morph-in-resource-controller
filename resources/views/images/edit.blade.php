@@ -2,7 +2,11 @@
     @csrf
     @method('PUT')
 
-    <input type="text" name="post_id" value="{{$item->post->id}}"/>
+    <select name="post">
+        @foreach($posts as $post)
+            <option value="{{$post->id}}" @if($item->post_id == $post->id) selected @endif>{{$post->name}}</option>
+        @endforeach
+    </select>
     <br><br>
     <input type="text" name="url" value="{{$item->url}}"/>
     <br><br>

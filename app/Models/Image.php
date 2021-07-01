@@ -9,7 +9,7 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $guarded = ['post_id'];
 
     public function post(){
         return $this->belongsTo(Post::class);
