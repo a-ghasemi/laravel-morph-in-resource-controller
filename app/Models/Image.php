@@ -9,9 +9,10 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['post_id'];
+    protected $guarded = [];
+//    protected $guarded = ['imageable_id','imageable_type'];
 
-    public function post(){
-        return $this->belongsTo(Post::class);
+    public function imageable(){
+        return $this->morphTo();
     }
 }

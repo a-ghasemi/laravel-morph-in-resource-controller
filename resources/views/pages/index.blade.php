@@ -30,10 +30,10 @@
             {{ $item->id }}
         </td>
         <td>
-            {{ $item->name }}
+            {{ $item->title }}
         </td>
         <td>
-            <a href="{{ route('posts.edit',[$item]) }}">edit</a>
+            <a href="{{ route('pages.edit',[$item]) }}">edit</a>
         </td>
     </tr>
     @endforeach

@@ -16,7 +16,7 @@
     <tr>
         <th>Image</th>
         <th>ID</th>
-        <th>Post ID</th>
+        <th>Imageable</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -30,12 +30,10 @@
             {{ $item->id }}
         </td>
         <td>
-            {{ $item->post->name }}( {{ $item->post->id }} )
+            {{ $item->imageable_type }} [{{ $item->imageable_id }}]
         </td>
         <td>
             <a href="{{ route('images.edit',[$item]) }}">edit</a>
-            |
-            <a href="{{ route('posts.edit',[$item->post]) }}">edit post</a>
         </td>
     </tr>
     @endforeach
