@@ -34,7 +34,14 @@ class PageController extends Controller
 
     public function update(Request $request, Page $page)
     {
-        $page->update($request->all());
+        $image = $request->image;
+        if($image){
+            $page->image ?
+                $page->image()->update(['url' => $image]):
+                $page->image()->create(['url' => $image]);
+        }
+
+        $page->update($request->only('title'));
         return redirect()->route('pages.index');
     }
 
